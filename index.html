@@ -7,44 +7,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="PICTURE/logo.png" alt="Logo" id="logo">
-        <h1>Importaciones Tecnológicas Activas</h1>
-        <p>Bienvenido a nuestra web de tecnología importada. Explora la galería y deja tus comentarios.</p>
-    </header>
-
-    <nav id="menu">
-        <button onclick="location.href='#inicio'">Inicio</button>
-        <button onclick="location.href='#galeria'">Galería</button>
-        <button onclick="location.href='#comentarios'">Formulario</button>
+    <!-- Navegación -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#formulario">Formulario</a></li>
+        </ul>
     </nav>
 
+    <!-- Sección Inicio -->
     <section id="inicio">
-        <h2>Inicio</h2>
-        <p>En Importaciones Tecnológicas Activas encontrarás los últimos gadgets y equipos tecnológicos, traídos de todo el mundo, con la mejor calidad y precios competitivos.</p>
+        <h1>Bienvenido a importaciones tecnologicas de mejor calidad y eficiencia</h1>
+        <p>Explora nuestros productos y envíanos tus comentarios a través del formulario.</p>
+        <img src="PICTURE/logo.png" alt="Logo" class="logo">
     </section>
 
+    <!-- Sección Galería -->
     <section id="galeria">
-        <h2>Galería</h2>
+        <h2>Galería de Productos</h2>
         <div class="imagenes">
             <img src="PICTURE/1.png" alt="Imagen 1">
-            <img src="PICTURE/3.png" alt="Imagen 2">
-            <img src="PICTURE/4.png" alt="Imagen 3">
+            <img src="PICTURE/2.png" alt="Imagen 2">
+            <img src="PICTURE/3.png" alt="Imagen 3">
+            <img src="PICTURE/4.png" alt="Imagen 4">
+            <img src="PICTURE/5.png" alt="Imagen 5">
+            <img src="PICTURE/6.png" alt="Imagen 6">
         </div>
     </section>
 
-    <section id="comentarios">
-        <h2>Formulario</h2>
-        <form id="formComentario">
-            <input type="text" id="nombre" placeholder="Tu nombre" required>
-            <textarea id="mensaje" placeholder="Tu comentario" required></textarea>
+    <!-- Sección Formulario -->
+    <section id="formulario">
+        <h2>Contacto / Comentarios</h2>
+        <form action="#" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="correo" placeholder="Correo electrónico" required>
+            <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
             <button type="submit">Enviar</button>
         </form>
-
-        <div id="comentariosMostrados">
-            <h3>Comentarios:</h3>
-            <ul id="listaComentarios"></ul>
-        </div>
     </section>
 
     <script src="script.js"></script>

@@ -32,3 +32,11 @@ window.addEventListener("DOMContentLoaded", async () => {
     const data = await response.json();
     mostrarComentarios(data);
 });
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Gracias por tu mensaje, ' + form.nombre.value + '!');
+    form.reset();
+});
