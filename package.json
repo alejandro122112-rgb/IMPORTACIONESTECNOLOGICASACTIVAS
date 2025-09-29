@@ -1,0 +1,12 @@
+{
+  "name": "importaciones-tecnologicas-act",
+  "version": "1.0.0",
+  "description": "Web con galería y comentarios dinámicos",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
