@@ -1,23 +1,18 @@
-const express = require("express");
-const path = require("path");
+const express = require('express');
+const path = require('path');
+
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
-app.use(express.json());
-app.use(express.static(__dirname)); // Sirve archivos desde la raíz
+// Servir archivos estáticos (HTML, CSS, JS, imágenes)
+app.use(express.static(path.join(__dirname)));
 
-let comentarios = [];
-
-app.post("/comentarios", (req, res) => {
-    const { nombre, mensaje } = req.body;
-    comentarios.push({ nombre, mensaje });
-    res.json(comentarios);
+// Ruta principal
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get("/comentarios", (req, res) => {
-    res.json(comentarios);
-});
-
-app.listen(port, () => {
-    console.log(`Servidor corriendo en http://localhost:${port}`);
+// Iniciar servidor
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en puerto ${PORT}`);
 });
